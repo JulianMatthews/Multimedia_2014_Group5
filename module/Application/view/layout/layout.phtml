@@ -1,0 +1,52 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('ZF2 '. $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/images/logo.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/style.css')
+                        ->prependStylesheet($this->basePath() . '/css/reset.css')
+                        ->prependStylesheet($this->basePath() . '/css/ie.css') ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath() . '/js/content_switch.js')
+            ->prependFile($this->basePath() . '/js/cufon-replace.js')
+              ->prependFile($this->basePath() . '/js/cufon-yui.js')
+            ->prependFile($this->basePath() . '/js/forms.js')
+             ->prependFile($this->basePath() . '/js/googleMap.js')
+            ->prependFile($this->basePath() . '/js/html5.js')
+              ->prependFile($this->basePath() . '/js/jquery.color.js')
+            ->prependFile($this->basePath() . '/js/jquery.easing.1.3.js')
+             ->prependFile($this->basePath() . '/js/jquery-1.6.js')
+            ->prependFile($this->basePath() . '/js/Kozuka_Gothic_Pro_OpenType_400.font.js')
+              ->prependFile($this->basePath() . '/js/PF_Tempesta_Seven_400.font.js')
+            ->prependFile($this->basePath() . '/js/script.js')
+            ->prependFile($this->basePath() . '/js/superfish.js')    
+                
+                
+            ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
+        ; ?>
+
+    </head>
+    <body>
+       
+        <div class="container">
+            <?php echo $this->content; ?>
+                      <hr>
+           
+        </div> <!-- /container -->
+        
+        
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>

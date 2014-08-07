@@ -1,0 +1,42 @@
+<div id="contents">
+		<div>
+			<div class="body" id="about">
+				<div id="sidebar">
+					<div class="body">
+                                           
+
+                                            <img src="<?php echo $this->basePath('images/registration_2.jpg') ?>" alt="img" width="420" height="362"/>&nbsp;<?php echo $this->translate('') ?>
+						<div class="contact">
+							<p>
+								Sign Up today or call: <b>760-962-9541</b> Or you can visit us at: <b>4885 Wilson Street<br> Victorville, CA 92392</b>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="main">  
+                                    <h1>Register Your Information</h1>
+<?php
+if (isset($_POST['submit'])){
+$con=mysqli_connect("localhost","root","","db");
+$sql="INSERT INTO drafts (id, title, description, post, author, category, declined)
+VALUES
+('','$_POST[title]',$_POST[description],$_POST[post],$_POST[author],$_POST[category],0)";
+echo "Droplet Successfully Added!";}
+?>
+
+<form action="register.phtml.php" method="post">
+  Name: <br /><input type="text" name="title"><br /><br />
+  Surname: <br /><textarea name="description"></textarea><br /><br />
+  Date Of Birth: <br /><textarea name="post"></textarea><br /><br />
+  Cell Phone Number: <br /><input type="text" name="author"><br /><br />
+  Email address: <br /><input type="text" name="category"><br /><br />
+  <input class="btn btn-info" type="submit" value="Submit for review">
+</form>
+
+                                    </Br> </Br> </Br> </Br> </Br>
+                                     <h1>Come Visit Us</h1>
+                                   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3310.399485230654!2d18.429545!3d-33.93085200000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xde4f27d9a1ed1b58!2sCape+Peninsula+University+of+Technology+-+Cape+Town+Campus!5e0!3m2!1sen!2sus!4v1403017737352" width="840" height="450" frameborder="0" style="border:0"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
